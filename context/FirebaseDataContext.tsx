@@ -56,13 +56,25 @@ export const DataProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         setError('Failed to load data from Firebase');
         
         // Fallback to mock data if Firebase fails
-        const { mockCustomers, mockAgents, mockDispositions, mockShows, mockAssociations, mockUsers } = await import('../data/mockData');
-        setCustomers(mockCustomers);
-        setAgents(mockAgents);
-        setDispositions(mockDispositions);
-        setShows(mockShows);
-        setAssociations(mockAssociations);
-        setUsers(mockUsers);
+        try {
+          const mockData = await import('../data/mockData');
+          setCustomers(mockData.initialCustomers || []);
+          setUsers(mockData.initialUsers || []);
+          // Set empty arrays for missing mock data
+          setAgents([]);
+          setDispositions([]);
+          setShows([]);
+          setAssociations([]);
+        } catch (mockError) {
+          console.error('Error loading mock data fallback:', mockError);
+          // Set empty arrays if mock data also fails
+          setCustomers([]);
+          setAgents([]);
+          setDispositions([]);
+          setShows([]);
+          setAssociations([]);
+          setUsers([]);
+        }
       } finally {
         setLoading(false);
       }
