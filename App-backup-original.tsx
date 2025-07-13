@@ -5,22 +5,11 @@ import { ToastProvider } from './components/Toast';
 import { AuthProvider } from './context/AuthContext';
 import { DataProvider } from './context/FirebaseDataContext';
 
-// Import the REAL LoginPage (confirmed working)
+// Import the REAL components to test them
 import LoginPage from './pages/LoginPage';
+import DashboardPage from './pages/DashboardPage';
 
-// Create a MINIMAL DashboardPage to test step by step
-const SimpleDashboardPage = () => {
-    return (
-        <div style={{ padding: '20px', backgroundColor: '#f0f8ff' }}>
-            <h1>Simple Dashboard Test</h1>
-            <p>✅ Basic Dashboard component works!</p>
-            <p>✅ All contexts loaded!</p>
-            <p>🔍 Testing minimal dashboard without complex components</p>
-        </div>
-    );
-};
-
-// Test with all contexts + routing + REAL LoginPage + SIMPLE DashboardPage
+// Test with all contexts + routing + REAL LoginPage + DashboardPage
 const App: React.FC = () => {
     return (
         <HashRouter>
@@ -30,21 +19,21 @@ const App: React.FC = () => {
                         <DataProvider>
                             <div style={{ padding: '20px', backgroundColor: '#f0f0f0' }}>
                                 <h1>PFFPNC Database Management System</h1>
-                                <p>🔍 Testing Simple Dashboard Component</p>
+                                <p>🔍 Testing Real LoginPage + DashboardPage</p>
                                 
                                 <Routes>
                                     <Route path="/login" element={<LoginPage />} />
-                                    <Route path="/dashboard" element={<SimpleDashboardPage />} />
-                                    <Route path="/" element={<SimpleDashboardPage />} />
+                                    <Route path="/dashboard" element={<DashboardPage />} />
+                                    <Route path="/" element={<DashboardPage />} />
                                 </Routes>
                                 
                                 <div style={{ marginTop: '20px', padding: '10px', backgroundColor: '#fff3cd' }}>
-                                    <h2>Simple Dashboard Test</h2>
+                                    <h2>Real Components Test</h2>
                                     <p>✅ All contexts loaded</p>
                                     <p>✅ Routing works</p>
                                     <p>✅ LoginPage works</p>
-                                    <p>🔍 Testing simple dashboard</p>
-                                    <p>If you see this, simple dashboard works!</p>
+                                    <p>🔍 Testing real DashboardPage</p>
+                                    <p>If you see this, DashboardPage works!</p>
                                 </div>
                             </div>
                         </DataProvider>
