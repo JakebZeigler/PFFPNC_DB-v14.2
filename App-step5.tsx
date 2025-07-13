@@ -3,7 +3,7 @@ import { HashRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import { ToastProvider } from './components/Toast';
 import { AuthProvider } from './context/AuthContext';
-import { FirebaseDataProvider } from './context/FirebaseDataContext';
+import { DataProvider } from './context/FirebaseDataContext';
 
 // Simple test components
 const LoginPage = () => <div style={{ padding: '20px' }}><h2>Login Page</h2><p>Login component loaded successfully!</p></div>;
@@ -14,7 +14,7 @@ function App() {
     <ThemeProvider>
       <ToastProvider>
         <AuthProvider>
-          <FirebaseDataProvider>
+          <DataProvider>
             <div>
               <h1 style={{ padding: '20px', backgroundColor: '#f0f0f0' }}>PFFPNC Database Management System</h1>
               <p style={{ padding: '0 20px' }}>✅ All contexts working | 🔍 Testing FirebaseDataContext...</p>
@@ -32,7 +32,7 @@ function App() {
                 <p style={{ marginTop: '10px', color: '#28a745' }}>🎉 If you see this, all contexts are working!</p>
               </div>
             </div>
-          </FirebaseDataProvider>
+          </DataProvider>
         </AuthProvider>
       </ToastProvider>
     </ThemeProvider>
