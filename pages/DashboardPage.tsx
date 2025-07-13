@@ -7,7 +7,7 @@ import UploadIcon from '../components/icons/UploadIcon';
 import DownloadIcon from '../components/icons/DownloadIcon';
 import ChartBarIcon from '../components/icons/ChartBarIcon';
 import UsersIcon from '../components/icons/UsersIcon';
-import { useData } from '../context/DataContext';
+import { useData } from '../context/FirebaseDataContext';
 import { DispositionModifier } from '../types';
 import { AiInsightsCard } from '../components/AiInsightsCard';
 
