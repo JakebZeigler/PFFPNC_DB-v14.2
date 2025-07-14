@@ -3,7 +3,7 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Modal from '../components/Modal';
 import ShowForm from '../components/ShowForm';
-import { useData } from '../context/DataContext';
+import { useData } from '../context/FirebaseDataContext';
 import { useToast } from '../components/Toast';
 import { Show, DispositionModifier } from '../types';
 

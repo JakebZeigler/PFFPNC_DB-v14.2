@@ -3,7 +3,7 @@ import React, { useMemo } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import Header from '../components/Header';
 import CustomerForm from '../components/CustomerForm';
-import { useData } from '../context/DataContext';
+import { useData } from '../context/FirebaseDataContext';
 import { useToast } from '../components/Toast';
 import { Customer } from '../types';
 import Spinner from '../components/Spinner';

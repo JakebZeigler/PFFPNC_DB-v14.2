@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import Header from '../components/Header';
-import { useData } from '../context/DataContext';
+import { useData } from '../context/FirebaseDataContext';
 import { useToast } from '../components/Toast';
 import { Disposition, DispositionModifier } from '../types';
 import { DISPOSITION_MODIFIERS_INFO } from '../constants';

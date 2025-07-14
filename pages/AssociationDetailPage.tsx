@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import Header from '../components/Header';
-import { useData } from '../context/DataContext';
+import { useData } from '../context/FirebaseDataContext';
 import Spinner from '../components/Spinner';
 import { DispositionModifier } from '../types';
 
