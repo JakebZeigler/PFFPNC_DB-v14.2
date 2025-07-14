@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import Modal from '../components/Modal';
 import { useToast } from '../components/Toast';
 import { Show } from '../types';
-import { useData } from '../context/DataContext';
+import { useData } from '../context/FirebaseDataContext';
 import ShowForm from '../components/ShowForm';
 
 const ShowsPage: React.FC = () => {

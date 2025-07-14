@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
-import { useData } from '../context/DataContext';
+import { useData } from '../context/FirebaseDataContext';
 import { useAuth } from '../context/AuthContext';
 import { useToast } from '../components/Toast';
 import { User } from '../types';

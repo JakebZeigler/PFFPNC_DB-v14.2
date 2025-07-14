@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import { useToast } from '../components/Toast';
 import Modal from '../components/Modal';
-import { useData } from '../context/DataContext';
+import { useData } from '../context/FirebaseDataContext';
 import { Customer, CustomerWithHistory, DispositionModifier } from '../types';
 import { downloadCSV, objectToCsv, downloadTXT } from '../utils/csv';
 import { DEFAULT_INVOICE_TEMPLATE } from '../constants';
