@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navigate, Outlet, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import MainLayout from './MainLayout';
 
 const AuthLayout: React.FC<{ adminOnly?: boolean }> = ({ adminOnly = false }) => {
     const { user } = useAuth();
@@ -15,7 +16,11 @@ const AuthLayout: React.FC<{ adminOnly?: boolean }> = ({ adminOnly = false }) =>
         return <Navigate to="/" replace />;
     }
 
-    return <Outlet />;
+    return (
+        <MainLayout>
+            <Outlet />
+        </MainLayout>
+    );
 };
 
 export default AuthLayout;
