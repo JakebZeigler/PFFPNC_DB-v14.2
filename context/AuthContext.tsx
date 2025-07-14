@@ -68,18 +68,26 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     const login = useCallback(async (email: string, password?: string): Promise<boolean> => {
         const foundUser = getUserByEmail(email);
 
-        if (foundUser && foundUser.password === password) {
-            if (foundUser.status === 'pending') {
-                throw new Error("Your account is pending approval by an administrator.");
-            }
-            if (foundUser.status === 'active') {
-                const { password, ...userToStore } = foundUser;
-                setUser(userToStore);
-                sessionStorage.setItem('pffpnc-user', JSON.stringify(userToStore));
-                return true;
-            }
+        if (!foundUser) {
+            throw new Error("Invalid email or password. Please try again.");
         }
-        return false;
+
+        if (foundUser.password !== password) {
+            throw new Error("Invalid email or password. Please try again.");
+        }
+
+        if (foundUser.status === 'pending') {
+            throw new Error("Your account is pending approval by an administrator.");
+        }
+
+        if (foundUser.status === 'active') {
+            const { password, ...userToStore } = foundUser;
+            setUser(userToStore);
+            sessionStorage.setItem('pffpnc-user', JSON.stringify(userToStore));
+            return true;
+        }
+
+        throw new Error("Account is not active. Please contact an administrator.");
     }, []);
 
     const logout = useCallback(() => {
