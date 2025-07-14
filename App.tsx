@@ -11,6 +11,13 @@ import DashboardPage from './pages/DashboardPage';
 import CustomersPage from './pages/CustomersPage';
 import ReportsPage from './pages/ReportsPage';
 import AgentsPage from './pages/AgentsPage';
+import ImportPage from './pages/ImportPage';
+import TextImportPage from './pages/TextImportPage';
+import ExportPage from './pages/ExportPage';
+import DispositionsPage from './pages/DispositionsPage';
+import ShowsPage from './pages/ShowsPage';
+import AssociationsPage from './pages/AssociationsPage';
+import UsersPage from './pages/UsersPage';
 
 // Import layouts
 import AuthLayout from './components/AuthLayout';
@@ -112,17 +119,17 @@ const App: React.FC = () => {
                                         <Route index element={<DashboardPage />} />
                                         <Route path="dashboard" element={<DashboardPage />} />
                                         
-                                        {/* Working placeholder pages while fixing imports */}
-                                        <Route path="customers" element={<TestCustomersPage />} />
-                                        <Route path="reports" element={<TestReportsPage />} />
-                                        <Route path="import" element={<TestImportPage />} />
-                                        <Route path="advanced-imports" element={<TestImportPage />} />
-                                        <Route path="export" element={<TestExportPage />} />
-                                        <Route path="agents" element={<TestAgentsPage />} />
-                                        <Route path="dispositions" element={<TestDispositionsPage />} />
-                                        <Route path="shows" element={<TestShowsPage />} />
-                                        <Route path="associations" element={<TestAssociationsPage />} />
-                                        <Route path="users" element={<TestUsersPage />} />
+                                        {/* Full functionality pages with fixed imports */}
+                                        <Route path="customers" element={<CustomersPage />} />
+                                        <Route path="reports" element={<ReportsPage />} />
+                                        <Route path="import" element={<ImportPage />} />
+                                        <Route path="advanced-imports" element={<TextImportPage />} />
+                                        <Route path="export" element={<ExportPage />} />
+                                        <Route path="agents" element={<AgentsPage />} />
+                                        <Route path="dispositions" element={<DispositionsPage />} />
+                                        <Route path="shows" element={<ShowsPage />} />
+                                        <Route path="associations" element={<AssociationsPage />} />
+                                        <Route path="users" element={<UsersPage />} />
                                     </Route>
                                 </Routes>
                             </div>
