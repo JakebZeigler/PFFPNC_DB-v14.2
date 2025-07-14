@@ -2,18 +2,18 @@
 import { GoogleGenAI } from "@google/genai";
 import { Customer, Agent, Disposition } from '../types';
 
-if (!process.env.API_KEY) {
-  console.warn("API_KEY environment variable not set for Gemini. AI features will be disabled.");
+if (!import.meta.env.VITE_API_KEY) {
+  console.warn("VITE_API_KEY environment variable not set for Gemini. AI features will be disabled.");
 }
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY! });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY! });
 
 export const generateReportSummary = async (
     reportData: { customers: Customer[], agents: Agent[], dispositions: Disposition[] },
     reportType: string
 ): Promise<string> => {
-    if (!process.env.API_KEY) {
-        return "Gemini API key is not configured. Please set the API_KEY environment variable.";
+    if (!import.meta.env.VITE_API_KEY) {
+        return "Gemini API key is not configured. Please set the VITE_API_KEY environment variable.";
     }
 
     const prompt = `
@@ -56,8 +56,8 @@ export const generateReportSummary = async (
 export const generateDashboardSummaryFromPrompt = async (
     prompt: string
 ): Promise<string> => {
-    if (!process.env.API_KEY) {
-        return "Gemini API key is not configured. Please set the API_KEY environment variable.";
+    if (!import.meta.env.VITE_API_KEY) {
+        return "Gemini API key is not configured. Please set the VITE_API_KEY environment variable.";
     }
 
     try {
