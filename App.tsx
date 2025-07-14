@@ -19,6 +19,7 @@ import ShowsPage from './pages/ShowsPage';
 import AssociationsPage from './pages/AssociationsPage';
 import UsersPage from './pages/UsersPage';
 import DiagnosticPage from './pages/DiagnosticPage';
+import SimpleTestPage from './pages/SimpleTestPage';
 
 // Import layouts
 import AuthLayout from './components/AuthLayout';
@@ -132,6 +133,7 @@ const App: React.FC = () => {
                                         <Route path="associations" element={<AssociationsPage />} />
                                         <Route path="users" element={<UsersPage />} />
                                         <Route path="diagnostic" element={<DiagnosticPage />} />
+                                        <Route path="test" element={<SimpleTestPage />} />
                                     </Route>
                                 </Routes>
                             </div>
