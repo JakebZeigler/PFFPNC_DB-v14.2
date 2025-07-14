@@ -2,7 +2,7 @@ import React, { useState, useCallback } from 'react';
 import Papa from 'papaparse';
 import Header from '../components/Header';
 import { useToast } from '../components/Toast';
-import { useData } from '../context/DataContext';
+import { useData } from '../context/FirebaseDataContext';
 import UploadIcon from '../components/icons/UploadIcon';
 import Spinner from '../components/Spinner';
 import { Customer, ImportHistoryLog, SkippedRow } from '../types';

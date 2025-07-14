@@ -7,7 +7,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
 import { flushSync } from 'react-dom';
 import Header from '../components/Header';
-import { useData } from '../context/DataContext';
+import { useData } from '../context/FirebaseDataContext';
 import { CustomerWithHistory, Agent, Disposition, Show, Association, DispositionModifier, DispositionHistory } from '../types';
 import { downloadCSV, objectToCsv, downloadHTML } from '../utils/csv';
 import DownloadIcon from '../components/icons/DownloadIcon';

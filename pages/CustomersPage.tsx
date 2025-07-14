@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Modal from '../components/Modal';
 import { useToast } from '../components/Toast';
-import { useData } from '../context/DataContext';
+import { useData } from '../context/FirebaseDataContext';
 
 const Pagination: React.FC<{ currentPage: number, totalPages: number, onPageChange: (page: number) => void }> = ({ currentPage, totalPages, onPageChange }) => {
     if (totalPages <= 1) return null;
