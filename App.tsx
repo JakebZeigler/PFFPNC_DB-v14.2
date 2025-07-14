@@ -112,13 +112,13 @@ const App: React.FC = () => {
                                         <Route index element={<DashboardPage />} />
                                         <Route path="dashboard" element={<DashboardPage />} />
                                         
-                                        {/* Restored functionality pages */}
-                                        <Route path="customers" element={<CustomersPage />} />
-                                        <Route path="reports" element={<ReportsPage />} />
+                                        {/* Working placeholder pages while fixing imports */}
+                                        <Route path="customers" element={<TestCustomersPage />} />
+                                        <Route path="reports" element={<TestReportsPage />} />
                                         <Route path="import" element={<TestImportPage />} />
                                         <Route path="advanced-imports" element={<TestImportPage />} />
                                         <Route path="export" element={<TestExportPage />} />
-                                        <Route path="agents" element={<AgentsPage />} />
+                                        <Route path="agents" element={<TestAgentsPage />} />
                                         <Route path="dispositions" element={<TestDispositionsPage />} />
                                         <Route path="shows" element={<TestShowsPage />} />
                                         <Route path="associations" element={<TestAssociationsPage />} />
