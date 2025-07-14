@@ -18,6 +18,7 @@ import DispositionsPage from './pages/DispositionsPage';
 import ShowsPage from './pages/ShowsPage';
 import AssociationsPage from './pages/AssociationsPage';
 import UsersPage from './pages/UsersPage';
+import DiagnosticPage from './pages/DiagnosticPage';
 
 // Import layouts
 import AuthLayout from './components/AuthLayout';
@@ -130,6 +131,7 @@ const App: React.FC = () => {
                                         <Route path="shows" element={<ShowsPage />} />
                                         <Route path="associations" element={<AssociationsPage />} />
                                         <Route path="users" element={<UsersPage />} />
+                                        <Route path="diagnostic" element={<DiagnosticPage />} />
                                     </Route>
                                 </Routes>
                             </div>
